@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sign Up - VaultofCodes</title>
+<style>
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+display: flex;
+height: 100vh;
+background-color: rgb(249, 237, 237);
+}
+.left {
+width: 40%;
+background: url('images/signup.png') no-repeat center center;
+background-size: cover;
+}
+.right {
+width: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #f9f9f9;
+}
+.form-box {
+background: white;
+padding: 40px;
+border-radius: 10px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+width: 80%;
+max-width: 400px;
+}
+.form-box h2 {
+margin-bottom: 20px;
+color: #333;
+}
+.form-box input {
+width: 100%;
+padding: 12px;
+margin-bottom: 15px;
+border-radius: 5px;
+border: 1px solid #ccc;
+}
+.form-box button {
+width: 100%;
+padding: 12px;
+background: #F4615B;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+.form-box button:hover {
+background: #F4615B;
+}
+@media screen and (max-width: 768px) {
+body {
+flex-direction: column;
+}
+.left, .right {
+width: 100%;
+height: 50vh;
+}
+}
+</style>
+</head>
+<body>
+<div class="left"></div>
+<div class="right">
+<div class="form-box">
+<h2>Sign up with mail</h2>
+<input type="text" placeholder="Full Name" id="fullName">
+<input type="email" placeholder="Email" id="email">
+<button onclick="submitSignup()">✉️Continue with mail</button>
+</div>
+</div>
+<script>
+function submitSignup() {
+const name = document.getElementById('fullName').value;
+const email = document.getElementById('email').value;
+if (name && email) {
+alert(`Signed up!\nName: ${name}\nEmail: ${email}`);
+// Optional: Redirect or save to backend
+} else {
+alert("Please fill in all fields.");
+}
+}
+</script>
+</body>
+</html>
